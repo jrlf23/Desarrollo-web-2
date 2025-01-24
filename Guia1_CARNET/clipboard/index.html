@@ -57,26 +57,26 @@
   <body>
     <!-- Sección Hero -->
     <section id="hero">
-      <div>
-        <img src="../images/logo.svg" alt="" />
-        <h3>Un historial de todo lo que copias</h3>
-        <p>
+      <div class="max-w-6xl mx-auto text-center px-10 mb:-40 pt-16">
+        <img src="../images/logo.svg" alt="" class="mx-auto my-16"/>
+        <h3 class="mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl">Un historial de todo lo que copias</h3>
+        <p class="max-w-3xl mx-auto leading-9 text-center text-darkGrayishBlue mb-10 text-2xl">
           Clipboard te permite rastrear y organizar todo lo que copias.
           Accede instantáneamente a tu portapapeles en todos tus dispositivos.
         </p>
         <!-- Contenedor de Botones -->
-        <div>
-          <a href="#">Descargar para iOS</a>
-          <a href="#">Descargar para Mac</a>
+        <div class="flex flex-col justify-center w-full space-y-6 text-xl text-white md:flex-row md:space-y-0 md:space-x-4">
+          <a href="#" class="py-4 px-8 rounded-full shadow-lg bg-strongCyan duration-200 hover:bg-opacity-80">Descargar para iOS</a>
+          <a href="#" class="py-4 px-8 rounded-full shadow-lg bg-strongCyan duration-200 hover:bg-opacity-80">Descargar para Mac</a>
         </div>
       </div>
     </section>
 
     <!-- Sección Snippets -->
     <section id="snippets">
-      <div>
-        <h3>Haz un seguimiento de tus fragmentos</h3>
-        <p>
+      <div class="max-w-6xl mx-auto text-center py-10 md:py-20">
+        <h3 class="mb-8 text-4xl font-bold text-darkGrayishBlue md:text-3xl">Haz un seguimiento de tus fragmentos</h3>
+        <p class="max-w-3xl mx-auto leading-9 text-center text-grayishBlue mb-24 text-xl">
           Clipboard guarda instantáneamente cualquier elemento que copies en la
           nube, lo que significa que puedes acceder a tus fragmentos inmediatamente
           en todos tus dispositivos. Nuestras aplicaciones para Mac y iOS te ayudarán
@@ -87,36 +87,37 @@
 
     <!-- Sección Características -->
     <section id="features">
-      <div>
-        <div>
+      <div class="max-w-6xl mx-auto text-center px-10 my-20">
+        <div class="relative flex flex-col md:flex-row md:space-x-32">
           <!-- Imagen -->
-          <div>
+          <div class="md:w-1/2">
             <img
               src="../images/image-computer.png"
               alt=""
+              class="md:absolute top-0 right-[-50%]"
             />
           </div>
           <!-- Contenedor de Elementos -->
-          <div>
+          <div class="flex flex-col mt-16 mb-24 space-y-12 text-xl md:w-1/2 md:mb-60 md:text-left md:pl-16">
             <!-- Elemento 1 -->
             <div>
-              <h5>Búsqueda Rápida</h5>
-              <p>
+              <h5 class="text-2xl font-bold text-darkGrayishBlue mb-2">Búsqueda Rápida</h5>
+              <p class="max-w-md text-grayishBlue">
                 Busca fácilmente tus fragmentos por contenido, categoría, dirección web,
                 aplicación y más.
               </p>
             </div>
             <!-- Elemento 2 -->
             <div>
-              <h5>Sincronización con iCloud</h5>
-              <p>
+              <h5 class="text-2xl font-bold text-darkGrayishBlue mb-2">Sincronización con iCloud</h5>
+              <p class="max-w-md text-grayishBlue">
                 Guarda y sincroniza instantáneamente los fragmentos en todos tus dispositivos.
               </p>
             </div>
             <!-- Elemento 3 -->
             <div>
-              <h5>Historial Completo</h5>
-              <p>
+              <h5 class="text-2xl font-bold text-darkGrayishBlue mb-2">Historial Completo</h5>
+              <p class="max-w-md text-grayishBlue">
                 Recupera cualquier fragmento desde el primer momento que comenzaste a usar
                 la aplicación.
               </p>
@@ -128,47 +129,47 @@
 
     <!-- Sección Acceso en Cualquier Lugar -->
     <section id="access">
-      <div>
-        <h3>Accede a Clipboard en Cualquier Lugar</h3>
-        <p>
+      <div class="max-w-6xl mx-auto text-center px-10 my-20">
+        <h3 class="mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl">Accede a Clipboard en Cualquier Lugar</h3>
+        <p class="max-w-3xl mx-auto leading-9 text-center text-grayishBlue mb-24 text-xl">
           Ya sea que estés en movimiento o en tu computadora, puedes acceder a todos tus
           fragmentos de Clipboard con unos simples clics.
         </p>
-        <img src="../images/image-devices.png" alt="" />
+        <img src="../images/image-devices.png" alt="" class="mx-auto"/>
       </div>
     </section>
 
     <!-- Sección Potencia tu Flujo de Trabajo -->
     <section id="supercharge">
-      <div>
-        <h3>Potencia tu flujo de trabajo</h3>
-        <p>
+      <div class="max-w-6xl mx-auto text-center px-10 my-20">
+        <h3 class="mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl">Potencia tu flujo de trabajo</h3>
+        <p class="max-w-3xl mx-auto leading-9 text-center text-grayishBlue mb-24 text-xl">
           Tenemos las herramientas para aumentar tu productividad.
         </p>
         <!-- Contenedor de Elementos -->
-        <div>
+        <div class="flex flex-col items-center justify-between space-y-16 md:flex-row md:space-y-0 md:space-x-12">
           <!-- Elemento 1 -->
-          <div>
-            <img src="../images/icon-blacklist.svg" alt="" />
-            <h5>Crear Listas Negras</h5>
-            <p>
+          <div class="flex flex-col items-center space-y-5">
+            <img src="../images/icon-blacklist.svg" alt="" class="mb-16"/>
+            <h5 class="mb-2 text-2xl font-bold text-darkGrayishBlue">Crear Listas Negras</h5>
+            <p class="max-w-md text-grayishBlue">
               Busca fácilmente tus fragmentos por contenido, categoría, dirección web,
               aplicación y más.
             </p>
           </div>
           <!-- Elemento 2 -->
-          <div>
-            <img src="../images/icon-text.svg" alt="" />
-            <h5>Fragmentos de Texto Plano</h5>
-            <p>
+          <div class="flex flex-col items-center space-y-5">
+            <img src="../images/icon-text.svg" alt="" class="mb-16"/>
+            <h5 class="mb-2 text-2xl font-bold text-darkGrayishBlue">Fragmentos de Texto Plano</h5>
+            <p class="max-w-md text-grayishBlue">
               Elimina el formato no deseado del texto copiado para una apariencia consistente.
             </p>
           </div>
           <!-- Elemento 3 -->
-          <div>
-            <img src="../images/icon-preview.svg" alt="" />
-            <h5>Vista Previa</h5>
-            <p>
+          <div class="flex flex-col items-center space-y-5">
+            <img src="../images/icon-preview.svg" alt="" class="mb-16"/>
+            <h5 class="mb-2 text-2xl font-bold text-darkGrayishBlue">Vista Previa</h5>
+            <p class="max-w-md text-grayishBlue">
               Vista previa rápida de todos los fragmentos en tu Clipboard para un acceso fácil.
             </p>
           </div>
