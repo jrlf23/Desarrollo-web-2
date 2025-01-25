@@ -179,7 +179,7 @@
 
     <!-- Sección de Referencias -->
     <section id="references">
-      <div>
+      <div class="flex flex-col items-center justify-between max-w-6xl px-10 mx-auto space-y-16 m-y-44 md:flex-row md:space-y-0">
         <img src="../images/logo-google.png" alt="" />
         <img src="../images/logo-ibm.png" alt="" />
         <img src="../images/logo-microsoft.png" alt="" />
@@ -190,47 +190,49 @@
 
     <!-- Sección CTA Inferior -->
     <section id="bottom">
-      <div>
-        <h3>Clipboard para iOS y MacOS</h3>
-        <p>
+      <div class="max-w-6xl mx-auto text-center px-10 my-20">
+        <h3 class="mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl">Clipboard para iOS y MacOS</h3>
+        <p class="max-w-3xl mx-auto leading-9 text-center text-grayishBlue mb-10 text-xl">
           Disponible de forma gratuita en la App Store. Descárgalo para Mac o iOS, sincronízalo
           con iCloud y estarás listo para comenzar a agregar a tu portapapeles.
         </p>
         <!-- Contenedor de Botones -->
-        <div>
-          <a href="#">Descargar para iOS</a>
-          <a href="#">Descargar para Mac</a>
+        <div class="flex flex-col justify-center w-full space-y-6 text-xl text-white md:flex-row md:space-y-0">
+          <a href="#" class="p-4 px-8 rounded-full shadow-lg bg-strongCyan duration-200 hover:opacity-80">Descargar para iOS</a>
+          <a href="#" class="p-4 px-8 rounded-full shadow-lg bg-lightBlue duration-200 hover:opacity-80">Descargar para Mac</a>
         </div>
       </div>
     </section>
 
-    <footer>
-      <div>
-        <div>
+    <footer class="bg-gray-50">
+      <div class="max-w-6xl mx-auto text-center px-10">
+        <div class="flex flex-col items-center justify-between md:flex-row">
           <!-- Imagen -->
-          <img src="../images/logo.svg" alt="" />
+          <img src="../images/logo.svg" alt="" class="scale-50"/>
           <!-- Contenedor de Menús y Redes Sociales -->
-          <div>
+          <div class="flex flex-col items-center justify-between flex-1 mb-10 md:flex-row space-x-6 md:mb-0 md:space-y-0 text-grayishBlue">
             <!-- Menús -->
-            <div>
+            <div class="flex flex-col space-y-4 md:flex-row md:ml-24 md:space-x-24 md:space-y-0">
               <!-- Menú 1 -->
-              <div><a href="#">FAQs</a></div>
-              <div><a href="#">Contáctanos</a></div>
+              <div class="flex flex-col space-y-4 text-center md:text-left">
+                <div><a href="#" class="hover:text-strongCyan">FAQs</a></div>
+                <div><a href="#" class="hover:text-strongCyan">Contáctanos</a></div>
+              </div>
             </div>
             <!-- Menú 2 -->
-            <div>
-              <div><a href="#">Política de Privacidad</a></div>
-              <div><a href="#">Kit de Prensa</a></div>
+            <div class="flex flex-col space-y-4 md:flex-row md:ml-24 md:space-x-24 md:space-y-0">
+              <div><a href="#" class="hover:text-strongCyan">Política de Privacidad</a></div>
+              <div><a href="#" class="hover:text-strongCyan">Kit de Prensa</a></div>
             </div>
             <!-- Menú 3 -->
-            <div>
-              <div><a href="#">Guía de Instalación</a></div>
+            <div class="flex flex-col space-y-4 md:flex-row md:ml-24 md:space-x-24 md:space-y-0">
+              <div><a href="#" class="hover:text-strongCyan">Guía de Instalación</a></div>
             </div>
             <!-- Iconos Sociales -->
-            <div>
-              <a href="#"><img src="../images/icon-facebook.svg" alt="" /></a>
-              <a href="#"><img src="../images/icon-twitter.svg" alt="" /></a>
-              <a href="#"><img src="../images/icon-instagram.svg" alt="" /></a>
+            <div class="flex justify-between w-32 py-1">
+              <a href="#"><img src="../images/icon-facebook.svg" alt="" class="duration-200 ficon" /></a>
+              <a href="#"><img src="../images/icon-twitter.svg" alt="" class="duration-200 ficon"/></a>
+              <a href="#"><img src="../images/icon-instagram.svg" alt="" class="duration-200 ficon"/></a>
             </div>
           </div>
         </div>
