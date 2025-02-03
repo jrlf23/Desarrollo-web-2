@@ -9,7 +9,7 @@ import { Guitar } from './Components/Guitar'
 function App() {
 
   const [data, setData]=useState(db)
-  console.log(data)
+  const [cart, setCar]=useState([])
 
   return (
     <>
@@ -19,7 +19,7 @@ function App() {
         <h2 className=" text-center">Nuestra Colección</h2>
 
         <div className="row mt-5">
-          {data.map((guitar)=> <Guitar guitar={guitar}/>)}
+          {data.map((guitar)=> <Guitar guitar={guitar} key={guitar.id} setCar={setCar}/>)}
             
         </div>
     </main>
