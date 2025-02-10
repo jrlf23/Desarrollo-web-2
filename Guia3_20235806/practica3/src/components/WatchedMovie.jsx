@@ -1,18 +1,30 @@
+import { useState } from "react";
+
 export function WatchedMoviesContainer({ children }) {
     return <>{children}</>;
-  }
+}
   
 export function WatchedMoviesList({ watched }) {
+    const [movies, setMovies] = useState(watched); // Estado local para la lista
+
+    const handleDeleteMovie = (id) => {
+        setMovies(movies.filter((movie) => movie.imdbID !== id));
+    };
+
     return (
         <ul className="list">
-            {watched.map((movie) => (
-                <WatchedMovie movie={movie} key={movie.imdbID} />
+            {movies.map((movie) => (
+                <WatchedMovie 
+                    movie={movie} 
+                    key={movie.imdbID} 
+                    onDelete={handleDeleteMovie} 
+                />
             ))}
         </ul>
     );
 }
           
-export function WatchedMovie({ movie }) {
+export function WatchedMovie({ movie, onDelete }) {
     return (
         <li>
             <img src={movie.poster} alt={`${movie.title} poster`} />
@@ -22,17 +34,17 @@ export function WatchedMovie({ movie }) {
                     <span>⭐</span>
                     <span>{movie.imdbRating}</span>
                 </p>
-          
                 <p>
                     <span>🌟</span>
                     <span>{movie.userRating}</span>
                 </p>
-          
                 <p>
                     <span>⏳</span>
                     <span>{movie.runtime} min</span>
                 </p>
-                <button className="btn-delete">X</button>
+                <button className="btn-delete" onClick={() => onDelete(movie.imdbID)}>
+                    X
+                </button>
             </div>
         </li>
     );
