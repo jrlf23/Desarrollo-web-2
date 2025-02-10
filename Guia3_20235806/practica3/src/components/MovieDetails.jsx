@@ -30,7 +30,7 @@ export const MovieDetails = ({ selectedId, onCloseMovie, onAddWatched, watched }
     const [userRating, setUserRating] = useState('');
 
     // Verifica si la película ya está en la lista de vistas
-    const iswatched = watched.some (movie => movie.imdbID === selectedId);
+    const isWatched = watched.some (movie => movie.imdbID === selectedId);
 
     // Obtiene la calificación previa del usuario si ya la ha visto 
     const watchedUserRating = watched.find(movie => movie.imdbID ===selectedId)?.userRating;

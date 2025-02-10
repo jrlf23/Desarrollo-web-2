@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Logo, Nav, NumResults, Search } from "./components/Nav"; 
 import { Box } from "./components/Box";
 import { MovieList } from "./components/Movie";
-import { WatchedMoviesContainer, WatchedMoviesList, WatchedSummary } from "./components/Watched Movie";
+import { WatchedMoviesContainer, WatchedMoviesList, WatchedSummary } from "./components/WatchedMovie";
 import { useFetchMovies} from "./hooks/useFetchMovies"; 
 import { MovieDetails } from "./components/MovieDetails";
 
@@ -17,7 +17,7 @@ export default function App() {
     const { movies, isLoading, error } = useFetchMovies(query);
 
     // Estado de películas vistas   
-    const [watched, setwatched] = useState([]);
+    const [watched, setWatched] = useState([]);
 
     // Estado para la película seleccionada 
     const [selectedId, setSelectedId] = useState(null);
@@ -68,7 +68,7 @@ export default function App() {
                     ): (
                         <>
                             <WatchedSummary watched={watched} />   
-                            <WatchedMovies List watched={watched} />
+                            <WatchedMoviesList watched={watched} />
                         </>
                     )}
                 </WatchedMoviesContainer>
