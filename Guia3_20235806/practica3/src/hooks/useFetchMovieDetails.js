@@ -37,7 +37,7 @@ export function useFetchMovieDetails(selectedId) {
 
                 // Petición a la API de OMDb con la clave de acceso y el ID de la película
                 const response = await fetch(
-                    `http://www.omdbapi.com/?apikey=${API_KEY}&i=${selectedId}`
+                    `https://www.omdbapi.com/?apikey=${API_KEY}&i=${selectedId}`
                 );
 
                 // Verifica si la respuesta HTTP es correcta
