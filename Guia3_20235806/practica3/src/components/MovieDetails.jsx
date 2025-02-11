@@ -82,7 +82,7 @@ export const MovieDetails = ({ selectedId, onCloseMovie, onAddWatched, watched }
                                 )}
                             </>
                         ) : (
-                            <p>Has calificado esta película con {watchedUserRating} </p>
+                            <p>Has calificado esta película con {watchedUserRating} ⭐</p>
                         )}
                     </div>
                     <p><em>{plot}</em></p>

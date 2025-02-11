@@ -9,7 +9,7 @@ export const Nav = ({ children }) => {
 export function Logo(){
     return(
         <div className="logo">
-            <span role="img"> 🗑️ </span>
+            <span role="img"> 🍿 </span>
             <h1>Palomitas de papel</h1>
         </div>
     )

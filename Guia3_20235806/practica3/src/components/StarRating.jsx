@@ -86,57 +86,46 @@ export default function StarRating({
     */
 
     function Star({ full, onRate, onHoverIn, onHoverOut, color, size }) {
-        // Estilos de la estrella
         const starStyle = {
-        width: `${size}px`,
-        height: `${size}px`, 
-        display: "block",
-        cursor: "pointer"
-    };
-
-    return (
-        <span
-            role="button"
-            style={starStyle}
-            onClick={onRate}
-            onMouseEnter={onHoverIn}
-            onMouseLeave={onHoverOut}
-        >
-            {full ? (
-                // Estrella rellena
-                <svg
-                    xmlns="http://www.w3.org/2000/svg" 
-                    viewBox="0 0 20 20" 
-                    fill={color} 
-                    stroke={color}
-                >
-                    <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 011.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.811-2.8 
-                        2.034a1 1 0 00-.364 1.11811.07 3.292c.3.921-.755 1.688-1.54 1.1181-2.8-2.034a1 1 0 00-1.175 01-2.8 
-                        2.034c-.784.57- 1.838-.197-1.539-1.11811.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38- 
-                        1.81.588-1.81h3.461a1 1 0 00.951-.6911.07-3.292z"
-                    /> 
-                </svg>
-            ): (
-                // Estrella vacía
-                <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke={color}
-                >
+            width: `${size}px`,
+            height: `${size}px`, 
+            display: "block",
+            cursor: "pointer"
+        };
     
-                    <path
+        return (
+            <span
+                role="button"
+                style={starStyle}
+                onClick={onRate}
+                onMouseEnter={onHoverIn}
+                onMouseLeave={onHoverOut}
+            >
+                {full ? (
+                    // Estrella rellena
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg" 
+                        viewBox="0 0 24 24" 
+                        fill={color} 
+                        stroke={color}
+                    >
+                        <path d="M12 2l2.9 6.26 6.9.52-5.3 4.88 1.56 6.84L12 16.89 6.94 20.5l1.56-6.84L3.2 8.78l6.9-.52z" />
+                    </svg>
+                ) : (
+                    // Estrella vacía
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke={color}
+                        strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M11.049 2.927c.3-.921 1.603-.921 1.902 011.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.811-3.976 
-                        2.888a1 1 0 00-.363 1.11811.518 4.674c.3.922-.755 1.688-1.538 1.1181-3.976-2.888a1 1 0 00-1.176 01-3.976 
-                        2.888c- .783.57-1.838-.197-1.538-1.11811.518-4.674a1 1 0 00-.363-1.1181-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 
-                        1 0 00.951-.6911.519-4.674z"
-                    /> 
-                </svg>
-            )}
-        </span>
-    );
-}
+                    >
+                        <path d="M12 2l2.9 6.26 6.9.52-5.3 4.88 1.56 6.84L12 16.89 6.94 20.5l1.56-6.84L3.2 8.78l6.9-.52z" />
+                    </svg>
+                )}
+            </span>
+        );
+    }
+    
