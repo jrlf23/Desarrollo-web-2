@@ -1,19 +1,35 @@
 export const initialState = {
     budget: 0,
     modal: false,
-    expenses: []
+    expenses: [],
+    editingId: ""
   }
   
   export const budgetReducer = (state, action) => {
     switch (action.type) {
       case "add-budget":
-        return { ...state, budget: action.payload.budget };
+        return { ...state, budget: action.payload.budget }
       case "show-modal":
         return {...state, modal: true}
       case "close-modal":
-        return {...state, modal: false}
+        return {...state, modal: false, editingId:""}
+      case "remove-expense":
+        return {...state, expenses: state.expenses.filter(expenses.id!=action.payload.id)}
+      case "get-expense-by-id":
+        return {...state, editingId: action.payload.id, modal:true}
+      case "update-expense":
+        return {...state, expenses: state.expenses.map(expense => expense.id === action.payload.expense.id? action.payload.expense: expense),
+          modal:false, editingId:""
+        }
       case "add-expense":
-        return {...state, expenses:[...state.expenses, action.payload.expenses], modal:false}
+        return {
+          ...state,
+          expenses: [
+          ...state.expenses,
+          { ...action.payload, id: new Date().getTime() }
+          ],
+          modal: false
+          }
       default:
         return state;
     }

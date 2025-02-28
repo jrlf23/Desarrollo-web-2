@@ -6,8 +6,10 @@ export const BudgetForm = () => {
   const isInvalid = isNaN(budget) || budget <= 0; // si no es un número >0 es inválido
 
   const handleChange = (e) => {
-    setBudget(e.target.valueAsNumber);
+    const newValue = e.target.valueAsNumber;
+    setBudget(isNaN(newValue) ? 0 : newValue);
   };
+  
 
   const dispatch = useContext(BudgetDispatchContext);
 
@@ -32,7 +34,7 @@ export const BudgetForm = () => {
         name="budget"
         placeholder="Define tu presupuesto"
         className="w-full bg-white border border-gray-200 p-2"
-        value={budget}
+        value={budget || ""}
         onChange={handleChange}
       />
       <input

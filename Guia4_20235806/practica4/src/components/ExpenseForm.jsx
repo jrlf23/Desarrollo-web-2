@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { categories } from '../data/categories'
 import DatePicker from 'react-date-picker'
 import 'react-date-picker/dist/DatePicker.css'
@@ -16,6 +16,14 @@ export const ExpenseForm = () => {
     const [error, setError] = useState('')
     const dispatch = useContext(BudgetDispatchContext)
     const state = useContext(BudgetStateContext)
+    useEffect(()=>{
+        if(state.editingId)
+        {
+            const editingExpense=state.expenses.filter(currentExpense=> currentExpense.id===state.editingId)[0]
+            setExpense(editingExpense)
+        }
+    }, [state.editingId])
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         const isAmountField = ["amount"].includes(name); // ["amount"] es un array con un solo valor, y .includes(name) devuelve true si name es "amount".
@@ -42,7 +50,7 @@ export const ExpenseForm = () => {
             setError('Todos los Campos son Obligatorios')
             return
         }
-        dispatch({ type: 'add-expense', payload: { expense } })
+        dispatch({ type: 'add-expense', payload: expense }) 
         // Reiniciar el state/form
         setExpense({
             expenseName: "",
