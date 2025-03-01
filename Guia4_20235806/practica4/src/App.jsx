@@ -5,6 +5,7 @@ import { BudgetStateContext } from './context/BudgetContext'
 import { BudgetTracker } from './components/BudgetTracker'
 import ExpenseModal from './components/ExpenseModal'
 import { ExpenseList } from './components/ExpenseList'
+import { FilterByCategory } from './components/FilterByCategory'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       </div>
       {isValidBudget && (
         <main className="max-w-3xl mx-auto py-10">
+          <FilterByCategory />
           <ExpenseList/>
           <ExpenseModal />
         </main>
