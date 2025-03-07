@@ -1,14 +1,16 @@
-import {BrowserRouter, Routes, Route} from "react-router"
-import {IndexPage} from "./pages/IndexPage"
-import {FavoritesPage} from "./pages/FavoritesPage"
+import { BrowserRouter, Routes, Route } from "react-router"
+import { IndexPage } from "./pages/IndexPage"
+import { FavoritesPage } from "./pages/FavoritesPage"
+import Layout from "./layout/Layout"
 
-const App=()=>
-{
-    return(
+const App = () => {
+    return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<IndexPage/>}/>
-                <Route path="/favoritos" element={<FavoritesPage/>}/>
+                <Route element={<Layout />}>
+                    <Route path="/" element={<IndexPage />} />
+                    <Route path="/favoritos" element={<FavoritesPage />} />
+                </Route>
             </Routes>
         </BrowserRouter>
     )
