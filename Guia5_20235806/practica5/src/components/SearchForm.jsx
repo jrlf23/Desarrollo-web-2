@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { useAppStore } from "../store/appStore";
+import { useAppStore } from "../store/useAppStore";
+
 
 export default function SearchForm() {
     const [searchFilters, setSearchFilters] = useState({

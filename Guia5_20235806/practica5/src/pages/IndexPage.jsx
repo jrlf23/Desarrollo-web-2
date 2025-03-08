@@ -7,7 +7,6 @@ export const IndexPage = () => {
   return (
     <>
       <h1 className="text-4xl font-bold">Recetas</h1>
-      16
       {hasDrinks ? (
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4
 my-10 gap-10">
