@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useAppStore } from "../store/useAppStore";
 
-
 export default function SearchForm() {
     const [searchFilters, setSearchFilters] = useState({
         ingredient: '',
@@ -15,9 +14,11 @@ export default function SearchForm() {
         });
     };
 
+    // Obtener funciones del store
     const fetchCategories = useAppStore((state) => state.fetchCategories);
     const categories = useAppStore((state) => state.categories);
     const searchRecipes = useAppStore((state) => state.searchRecipes);
+    const setNotification = useAppStore((state) => state.setNotification);
 
     useEffect(() => {
         fetchCategories();
@@ -28,7 +29,7 @@ export default function SearchForm() {
 
         // Validación
         if (Object.values(searchFilters).includes('')) {
-            console.log('Todos los campos son obligatorios');
+            setNotification("Todos los campos son obligatorios", "error"); // Mostrar notificación de error
             return;
         }
 
