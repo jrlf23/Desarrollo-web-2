@@ -4,7 +4,7 @@ import 'dotenv/config';
 export const connectBD=async()=>{
     try
     {
-        const url=process.env.DATABASEURL
+        const url=process.env.DATABASE_URL
         const connection= await mongoose.connect(url)
         console.log('Mongo conectado');
     }
